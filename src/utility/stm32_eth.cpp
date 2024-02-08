@@ -286,7 +286,7 @@ uint8_t stm32_eth_link_up(void)
   */
 void stm32_eth_scheduler(void)
 {
-  _stm32_eth_scheduler
+  _stm32_eth_scheduler();
 }
 
 /**
