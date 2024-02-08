@@ -193,9 +193,9 @@ static void TIM_scheduler_Config(void)
   EthTim->setMode(1, TIMER_OUTPUT_COMPARE);
 
   /* Timer set to 1ms */
-  EthTim->setOverflow(1000, MICROSEC_FORMAT);
-  EthTim->attachInterrupt(scheduler_callback);
-  EthTim->resume();
+  // EthTim->setOverflow(1000, MICROSEC_FORMAT);
+  // EthTim->attachInterrupt(scheduler_callback);
+  // EthTim->resume();
 }
 #endif
 
@@ -286,9 +286,7 @@ uint8_t stm32_eth_link_up(void)
   */
 void stm32_eth_scheduler(void)
 {
-  if (EthTim != NULL) {
-    EthTim->refresh();
-  }
+  _stm32_eth_scheduler
 }
 
 /**
